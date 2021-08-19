@@ -1,2 +1,2 @@
-Scriptname DanceCommand extends Quest  
+scriptName DanceCommand extends Quest  
 {Makes the target actor or player dance!}

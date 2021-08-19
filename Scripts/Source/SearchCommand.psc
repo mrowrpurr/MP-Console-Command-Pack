@@ -1,2 +1,2 @@
-Scriptname SearchCommand extends Quest  
+scriptName SearchCommand extends Quest  
 {Filter the `help` command}

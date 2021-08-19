@@ -1,2 +1,2 @@
-Scriptname DogCommand extends Quest  
+scriptName DogCommand extends Quest  
 {Spawns or disables a dog companion}
