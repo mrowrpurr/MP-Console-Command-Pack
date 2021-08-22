@@ -5,6 +5,7 @@ function Info()
 endFunction
 
 event OnCommand()
+	Print("Quiting to Main Menu")
 	ConsoleHelper.EnableNativeEnterReturnKeyHandling()
 	Game.QuitToMainMenu()
 endEvent
