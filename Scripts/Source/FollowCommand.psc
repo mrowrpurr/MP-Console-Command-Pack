@@ -19,6 +19,11 @@ event OnCommand()
     DialogueFollowerScript followerQuest = Game.GetForm(0x750ba) as DialogueFollowerScript
     Actor currentFollower = followerQuest.pFollowerAlias.GetActorReference()
     if currentFollower
+        if Arguments[0] == "me"
+            currentFollower.MoveTo(Game.GetPlayer())
+            return
+        endIf
+
         if currentFollower == target
             if HasFlag("dismiss")
                 followerQuest.DismissFollower()
