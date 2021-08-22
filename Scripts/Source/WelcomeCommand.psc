@@ -10,7 +10,14 @@ function Setup()
     RegisterForConsoleMenu()
 endFunction
 
+; Allow subscription to player load game! Require an explicit subscription tho :)
+; event OnPlayerLoadGame()
+; endEvent
+
 event OnMenuOpen(string _)
-    ConsoleHelper.ClearBodyText()
-    ConsoleHelper.SetHeaderText("~ Welcome to the Skyrim console ~")
+    if ! _hasBeenOpenedInThisGameSession
+        _hasBeenOpenedInThisGameSession = true
+        ConsoleHelper.ClearBodyText()
+        ConsoleHelper.SetHeaderText("~ Welcome to the Skyrim console ~")
+    endIf
 endEvent

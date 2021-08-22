@@ -1,7 +1,14 @@
 Scriptname ClearCommand extends ConsoleCommand  
 {Clears the ~ Skyrim console text}
 
+function Flags()
+    Flag("all", "a")
+endFunction
+
 event OnCommand()
-    ConsoleHelper.ClearBodyText()
-    ConsoleHelper.ClearHeaderText()
+    if HasFlag("all")
+        ConsoleHelper.ClearAllText()
+    else
+        ConsoleHelper.ClearBodyText()
+    endIf
 endEvent

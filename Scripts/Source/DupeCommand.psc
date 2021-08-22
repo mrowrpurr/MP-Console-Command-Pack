@@ -9,6 +9,17 @@ event OnCommand()
     if ! target
         Print("No target object to duplicate")
     endIf
-    target.PlaceAtMe(target.GetBaseObject())
+    if Arguments.Length > 0
+        int count = Arguments[0] as int
+        if count == 0
+            count = 1
+        endIf
+        int index = 0
+        while index < count
+            target.PlaceAtMe(target.GetBaseObject())
+            index += 1
+        endWhile
+    else
+    endIf
     Print("Duplicated " + target.GetBaseObject().GetName())
 endEvent
