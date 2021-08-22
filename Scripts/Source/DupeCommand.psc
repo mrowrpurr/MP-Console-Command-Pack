@@ -20,6 +20,7 @@ event OnCommand()
             index += 1
         endWhile
     else
+        target.PlaceAtMe(target.GetBaseObject())
     endIf
     Print("Duplicated " + target.GetBaseObject().GetName())
 endEvent
