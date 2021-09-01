@@ -8,12 +8,14 @@ endFunction
 
 event OnCommand()
     Actor target = Game.GetCurrentConsoleRef() as Actor
-    if ! target
-        target = Game.GetCurrentCrosshairRef() as Actor
-    endIf
-    if ! target
-        Print("No target actor to follow you")
-        return
+    if ! Arguments[0] == "me"
+        if ! target
+            target = Game.GetCurrentCrosshairRef() as Actor
+        endIf
+        if ! target
+            Print("No target actor to follow you")
+            return
+        endIf
     endIf
 
     DialogueFollowerScript followerQuest = Game.GetForm(0x750ba) as DialogueFollowerScript

@@ -5,6 +5,6 @@ event OnCommand()
     Actor player = Game.GetPlayer()
     ObjectReference marker = Game.GetFormFromFile(0xd64, "MPConsoleCommandPack.esp") as ObjectReference
     marker.MoveTo(player)
-    StoreForm("marker", marker)
+    ; StoreForm("marker", marker)
     Print("Marked!")
 endEvent

@@ -4,16 +4,16 @@ Scriptname StyleCommand extends ConsoleCommand
 function Setup()
     ; For right now it just makes my customizations, will actually make it a proper ommand later
     SetupConsole()
-    RegisterForConsoleMenu()
+    RegisterForMenu(ConsoleMenu.GetMenuName())
 endFunction
 
 event OnMenuOpen(string _)
-    ; RepositionConsole()
+    RepositionConsole()
 endEvent
 
 function SetupConsole()
-    ConsoleHelper.HideBackground()
-    ConsoleHelper.SetBorderColor("white")
+    ConsoleMenu.HideBackground()
+    ConsoleMenu.SetBorderColor("white")
     ; RepositionConsole()
 endFunction
 
@@ -22,14 +22,14 @@ event OnCommand()
 endEvent
 
 function RepositionConsole()
-    ConsoleHelper.SetHeaderPositionY(0 - ConsoleHelper.GetHeaderHeight())
-    ConsoleHelper.SetBodyPositionY(ConsoleHelper.GetScreenHeight() * -1)
-    ConsoleHelper.SetTextInputPositionY(0 - ConsoleHelper.GetHeaderHeight() - ConsoleHelper.GetTextInputHeight())
-    ConsoleHelper.SetBodyHeight(ConsoleHelper.GetScreenHeight() - ConsoleHelper.GetTextInputHeight() - ConsoleHelper.GetHeaderHeight())
-    ConsoleHelper.SetBodyPositionX(0)
-    ConsoleHelper.SetTextInputPositionX(0)
-    ConsoleHelper.SetHeaderPositionX(0)
-    ConsoleHelper.SetBodyWidth(ConsoleHelper.GetScreenWidth())
-    ConsoleHelper.SetTextInputWidth(ConsoleHelper.GetScreenWidth())
-    ConsoleHelper.SetHeaderWidth(ConsoleHelper.GetScreenWidth())
+    ConsoleMenu.SetHeaderPositionY(0 - ConsoleMenu.GetHeaderHeight())
+    ConsoleMenu.SetBodyPositionY(ConsoleMenu.GetScreenHeight() * -1)
+    ConsoleMenu.SetTextInputPositionY(0 - ConsoleMenu.GetHeaderHeight() - ConsoleMenu.GetTextInputHeight())
+    ConsoleMenu.SetBodyHeight(ConsoleMenu.GetScreenHeight() - ConsoleMenu.GetTextInputHeight() - ConsoleMenu.GetHeaderHeight())
+    ConsoleMenu.SetBodyPositionX(0)
+    ConsoleMenu.SetTextInputPositionX(0)
+    ConsoleMenu.SetHeaderPositionX(0)
+    ConsoleMenu.SetBodyWidth(ConsoleMenu.GetScreenWidth())
+    ConsoleMenu.SetTextInputWidth(ConsoleMenu.GetScreenWidth())
+    ConsoleMenu.SetHeaderWidth(ConsoleMenu.GetScreenWidth())
 endFunction

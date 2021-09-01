@@ -7,8 +7,8 @@ endFunction
 
 event OnCommand()
     if HasFlag("all")
-        ConsoleHelper.ClearAllText()
+        ConsoleMenu.ClearAllText()
     else
-        ConsoleHelper.ClearBodyText()
+        ConsoleMenu.ClearBodyText()
     endIf
 endEvent

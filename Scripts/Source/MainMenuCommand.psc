@@ -6,6 +6,6 @@ endFunction
 
 event OnCommand()
 	Print("Quiting to Main Menu")
-	ConsoleHelper.EnableNativeEnterReturnKeyHandling()
+	ConsoleMenu.EnableNativeEnterReturnKeyHandling()
 	Game.QuitToMainMenu()
 endEvent
